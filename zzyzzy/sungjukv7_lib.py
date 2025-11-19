@@ -96,10 +96,10 @@ def readone_sungjuk(sungjuks):
     """
     result = ''
 
-    namekey = input('조회할 학생 이름은?: ')
+    sjnokey = int(input('조회할 학생 번호는?: '))
 
     for sjno, name, kor, eng, mat, tot, avg, grd in sungjuks:
-        if namekey == name:
+        if sjnokey == sjno:
             result += f'{sjno:3d} {name:5s} {kor:4d} {eng:4d} {mat:4d} ' \
                    f'{tot:4d} {avg:4.2f} {grd:4s}\n'
 
